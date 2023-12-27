@@ -12,18 +12,14 @@ loginButton.addEventListener("click", (e) => {
     const logged_in = 0;
 
     if (username === "itas" && password === "bokidomain") {
-        // If the credentials are valid, show an alert box and reload the page
-        alert("You have successfully logged in.");
-        const logged_in = 1;
-        document.write("welcome")
-        document.write(username)
+        // If the credentials are valid, show a welcome message and a pict
+        document.write('<p style="font-size:25px;color:green;">Welcome '+username+' !</p>')
+	document.write('<img src="apache.jpg" alt="APA_FORM" >')
 
-
-
-        location.reload();
     } else {
         // Otherwise, make the login error message show (change its oppacity)
         loginErrorMsg.style.opacity = 1;
     }
 })
+
 
