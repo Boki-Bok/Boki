@@ -13,7 +13,7 @@ loginButton.addEventListener("click", (e) => {
     if (username === "itas" && password === "bokidomain") {
         // If the credentials are valid, show a welcome message and a pict
         document.write('<p style="font-size:25px;color:green;">Welcome '+username+' !</p>')
-	document.write('<img src="apache.jpg" alt="APA_FORM" >')
+		document.write('<img src="apache.jpg" alt="APA_FORM" >')
 
 	// set a small cookie session 
 	let date = Date.now() + 60000;
