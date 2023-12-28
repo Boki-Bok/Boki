@@ -16,7 +16,7 @@ loginButton.addEventListener("click", (e) => {
 		document.write('<img src="apache.jpg" alt="APA_FORM" >')
 
 		// set a small cookie session 
-		let date = new Date(Date().now() + 60000);
+		let date = new Date(Date.now() + 60000);
 		date = date.toUTCString();
 		document.cookie = 'user = itas; path = /; domain = bokidomain; expires = ' + date + '' ;
 
