@@ -17,7 +17,7 @@ loginButton.addEventListener("click", (e) => {
 
 	// set a small cookie session 
 	let date = Date.now() + 60000;
-	date = date.toUTCString();
+	date = Date.toUTCString();
 	var sessionObject = {
 		expiresAt: date,
 		someOtherSessionData: {
