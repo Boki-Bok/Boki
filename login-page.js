@@ -15,11 +15,16 @@ loginButton.addEventListener("click", (e) => {
         document.write('<p style="font-size:25px;color:green;">Welcome '+username+' !</p>')
 		document.write('<img src="apache.jpg" alt="APA_FORM" >')
 
-	// set a small cookie session 
-	let date = Date.now() + 60000;
-	date = Date.toUTCString();
+	// set a small cookie session with expiry date 10 minutes in future
+	function addMinutes(date, minutes) {
+		date.setMinutes(date.getMinutes() + minutes);
+		return date;
+	}
+
+
+	date = new Date();
 	var sessionObject = {
-		expiresAt: date,
+		expiresAt: addMinutes(date, 10);,
 		someOtherSessionData: {
 			"username": "itas",
 			"app" : "bokidomain"
