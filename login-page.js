@@ -24,7 +24,7 @@ loginButton.addEventListener("click", (e) => {
 
 	date = new Date();
 	var sessionObject = {
-		expiresAt: addMinutes(date, 10);,
+		expiresAt: addMinutes(date, 10),
 		someOtherSessionData: {
 			"username": "itas",
 			"app" : "bokidomain"
