@@ -15,13 +15,15 @@ loginButton.addEventListener("click", (e) => {
         document.write('<p style="font-size:25px;color:green;">Welcome '+username+' !</p>')
 		document.write('<img src="apache.jpg" alt="APA_FORM" >')
 
+		// set a small cookie session 
+		let date = new Date(Date().now() + 60000);
+		date = date.toUTCString();
+		document.cookie = 'user = itas; path = /; domain = bokidomain; expires = ' + date + '' ;
+
     } else {
         // Otherwise, make the login error message show (change its oppacity)
         loginErrorMsg.style.opacity = 1;
     }
 	
-	// set a small cookie session 
-	let date = new Date(Date().now() + 60000);
-	date = date.toUTCString();
-	document.cookie = 'user = itas; path = /; domain = bokidomain; expires = ' + date + '; secure' ;
+
 })
