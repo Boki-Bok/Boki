@@ -47,4 +47,4 @@ loginButton.addEventListener("click", (e) => {
 	}
 
 }
-
+)
