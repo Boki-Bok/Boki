@@ -17,7 +17,7 @@
     <h1 id="login-header">Login</h1>
   <script>
   	// If the session is valid in LocalStorage, show a welcome message and a pict
-	sessionObject = window.LocalStorage.getItem('sessionObject')
+	sessionObject = window.localStorage.getItem('sessionObject')
 	date = new Date();
 	if sessionObject != null
 	if ( sessionObject.expiresAt > date ) {
