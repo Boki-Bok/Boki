@@ -20,11 +20,12 @@
 	sessionObject = window.localStorage.getItem('sessionObject')
 	sessionObjectJson = JSON.parse(sessionObject)
 	date = new Date();
-	document.write('<p style="font-size:25px;color:green;">' + typeof sessionObjectJson.expiresAt + ' !</p>')
+	expiresAt = new Date(sessionObjectJson.expiresAt);
+	document.write('<p style="font-size:25px;color:green;">' + typeof expiresAt + ' !</p>')
 	document.write('<p style="font-size:25px;color:green;">username: ' + JSON.stringify(sessionObjectJson.someOtherSessionData.username) + ' ?</p>')
 	document.write('<p style="font-size:25px;color:green;">expiresAt: ' + JSON.stringify(sessionObjectJson.expiresAt) + ' ?</p>')
-	document.write('<p style="font-size:25px;color:green;">date: ' + JSON.stringify(sessionObjectJson.expiresAt) + ' ?</p>')
-	if ( sessionObjectJson.expiresAt > date ) {
+	document.write('<p style="font-size:25px;color:green;">date: ' + date + ' ?</p>')
+	if ( expiresAt > date ) {
 		document.write('<p style="font-size:25px;color:green;">how are you '+sessionObjectJson.someOtherSessionData.username+' ?</p>')
 		document.write('<img src="apache.jpg" alt="APA_FORM" >')
 	} else {
