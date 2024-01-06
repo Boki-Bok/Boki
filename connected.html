@@ -14,13 +14,13 @@
 
 <body>
   <main id="main-holder">
-    <h1 id="login-header">Login</h1>
+    <h1 id="login-header">Welcome</h1>
   <script>
   	// If the session is valid in LocalStorage, show a welcome message and a pict
 	sessionObject = window.localStorage.getItem('sessionObject')
 	date = new Date();
 	if ( sessionObject.expiresAt > date ) {
-		document.write('<p style="font-size:25px;color:green;">Welcome '+username+' !</p>')
+		document.write('<p style="font-size:25px;color:green;">how are you '+username+' ?</p>')
 		document.write('<img src="apache.jpg" alt="APA_FORM" >')
 	} else {
 		window.location.href = 'login.html';
