@@ -19,9 +19,6 @@ loginButton.addEventListener("click", (e) => {
 
     if (username === "itas" && password === "bokidomain") {
         
-		document.write('<p style="font-size:25px;color:green;">Welcome '+username+' !</p>')
-		document.write('<img src="apache.jpg" alt="APA_FORM" >')
-
 		date = new Date();
 		var sessionObject = {
 			expiresAt: addMinutes(date, 10),
@@ -42,12 +39,12 @@ loginButton.addEventListener("click", (e) => {
 
 	
 	// If the session is valid in LocalStorage, show a welcome message and a pict
-	if (connected == 1 and sessionObject.expiresAt > date ) {
+	if ( connected == 1 && sessionObject.expiresAt > date ) {
 		document.write('<p style="font-size:25px;color:green;">Welcome '+username+' !</p>')
 		document.write('<img src="apache.jpg" alt="APA_FORM" >')
 	} else {
 		window.location.href = 'login.html';
 	}
 
+}
 
-})
