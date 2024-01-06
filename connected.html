@@ -19,7 +19,7 @@
   	// If the session is valid in LocalStorage, show a welcome message and a pict
 	sessionObject = window.localStorage.getItem('sessionObject')
 	date = new Date();
-	document.write('<p style="font-size:25px;color:green;">typeof : ' + sessionObject + ' !</p>')
+	document.write('<p style="font-size:25px;color:green;">' + typeof sessionObject + ' !</p>')
 	document.write('<p style="font-size:25px;color:green;">localstorage: ' + JSON.stringify(sessionObject.someOtherSessionData.username) + ' ?</p>')
 	document.write('<p style="font-size:25px;color:green;">localstorage: ' + JSON.stringify(sessionObject.expiresAt) + ' ?</p>')
 	if ( sessionObject.expiresAt > date ) {
