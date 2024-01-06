@@ -31,17 +31,18 @@ loginButton.addEventListener("click", (e) => {
 			}
 		}
 		LocalStorage.setItem('sessionObject', JSON.stringify(sessionObject));
+		connected = 1;
 		window.location.href = '../connected.html';
+		
 
     } else {
         // Otherwise, make the login error message show (change its oppacity)
         loginErrorMsg.style.opacity = 1;
     }
 
-	location = window.location.href;
 	
 	// If the session is valid in LocalStorage, show a welcome message and a pict
-	if (location == 'connected.html' and sessionObject.expiresAt > date ) {
+	if (connected == 1 and sessionObject.expiresAt > date ) {
 		document.write('<p style="font-size:25px;color:green;">Welcome '+username+' !</p>')
 		document.write('<img src="apache.jpg" alt="APA_FORM" >')
 	} else {
