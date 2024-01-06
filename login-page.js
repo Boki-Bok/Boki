@@ -28,7 +28,7 @@ loginButton.addEventListener("click", (e) => {
 				"app" : "bokidomain"
 			}
 		}
-		sessionStorage.setItem('sessionObject', JSON.stringify(sessionObject));
+		LocalStorage.setItem('sessionObject', JSON.stringify(sessionObject));
 		connected = 1;
 		window.location.href = '/connected.html';
 		
@@ -37,15 +37,7 @@ loginButton.addEventListener("click", (e) => {
         // Otherwise, make the login error message show (change its oppacity)
         loginErrorMsg.style.opacity = 1;
     }
-
 	
-	// If the session is valid in LocalStorage, show a welcome message and a pict
-	if ( connected == 1 && sessionObject.expiresAt > date ) {
-		document.write('<p style="font-size:25px;color:green;">Welcome '+username+' !</p>')
-		document.write('<img src="apache.jpg" alt="APA_FORM" >')
-	} else {
-		window.location.href = '/login.html';
-	}
 
 }
 )
