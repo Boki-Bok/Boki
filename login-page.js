@@ -9,7 +9,7 @@ loginButton.addEventListener("click", (e) => {
     // Get the values input by the user in the form fields
     const username = loginForm.username.value;
     const password = loginForm.password.value;
-	connected = 0;
+	const connected = 0;
 
 	// set a small cookie session with expiry date 10 minutes in future
 	function addMinutes(date, minutes) {
