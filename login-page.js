@@ -29,7 +29,7 @@ loginButton.addEventListener("click", (e) => {
 			}
 		}
 		localStorage.setItem('sessionObject', JSON.stringify(sessionObject));
-		connected = 1;
+		//connected = 1;
 		window.location.href = '/connected.html';
 		
 
