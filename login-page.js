@@ -27,7 +27,7 @@ loginButton.addEventListener("click", (e) => {
 				"app" : "bokidomain"
 			}
 		}
-		LocalStorage.setItem('sessionObject', JSON.stringify(sessionObject));
+		sessionStorage.setItem('sessionObject', JSON.stringify(sessionObject));
 		connected = 1;
 		window.location.href = 'connected.html';
 		
