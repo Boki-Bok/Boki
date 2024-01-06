@@ -30,7 +30,7 @@ loginButton.addEventListener("click", (e) => {
 		}
 		sessionStorage.setItem('sessionObject', JSON.stringify(sessionObject));
 		connected = 1;
-		window.location.href = 'connected.html';
+		window.location.href = '/connected.html';
 		
 
     } else {
@@ -44,7 +44,7 @@ loginButton.addEventListener("click", (e) => {
 		document.write('<p style="font-size:25px;color:green;">Welcome '+username+' !</p>')
 		document.write('<img src="apache.jpg" alt="APA_FORM" >')
 	} else {
-		window.location.href = 'login.html';
+		window.location.href = '/login.html';
 	}
 
 }
