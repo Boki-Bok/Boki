@@ -10,11 +10,6 @@ loginButton.addEventListener("click", (e) => {
     const username = loginForm.username.value;
     const password = loginForm.password.value;
 
-    if (username === "itas" && password === "bokidomain") {
-        // If the credentials are valid, show a welcome message and a pict
-        document.write('<p style="font-size:25px;color:green;">Welcome '+username+' !</p>')
-		document.write('<img src="apache.jpg" alt="APA_FORM" >')
-
 	// set a small cookie session with expiry date 10 minutes in future
 	function addMinutes(date, minutes) {
 		date.setMinutes(date.getMinutes() + minutes);
@@ -22,18 +17,36 @@ loginButton.addEventListener("click", (e) => {
 	}
 
 
-	date = new Date();
-	var sessionObject = {
-		expiresAt: addMinutes(date, 10),
-		someOtherSessionData: {
-			"username": "itas",
-			"app" : "bokidomain"
+    if (username === "itas" && password === "bokidomain") {
+        
+		document.write('<p style="font-size:25px;color:green;">Welcome '+username+' !</p>')
+		document.write('<img src="apache.jpg" alt="APA_FORM" >')
+
+		date = new Date();
+		var sessionObject = {
+			expiresAt: addMinutes(date, 10),
+			someOtherSessionData: {
+				"username": "itas",
+				"app" : "bokidomain"
+			}
 		}
-	}
-	sessionStorage.setItem('sessionObject', JSON.stringify(sessionObject));
+		LocalStorage.setItem('sessionObject', JSON.stringify(sessionObject));
+		window.location.href = '../connected.html';
 
     } else {
         // Otherwise, make the login error message show (change its oppacity)
         loginErrorMsg.style.opacity = 1;
     }
+
+	location = window.location.href;
+	
+	// If the session is valid in LocalStorage, show a welcome message and a pict
+	if (location == 'connected.html' and sessionObject.expiresAt > date ) {
+		document.write('<p style="font-size:25px;color:green;">Welcome '+username+' !</p>')
+		document.write('<img src="apache.jpg" alt="APA_FORM" >')
+	} else {
+		window.location.href = '../login.html';
+	}
+
+
 })
