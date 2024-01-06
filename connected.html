@@ -22,8 +22,9 @@
 	date = new Date();
 	expiresAt = new Date(sessionObjectJson.expiresAt);
 	if ( expiresAt > date ) {
-		document.write('<p style="font-size:25px;color:green;">how are you '+sessionObjectJson.someOtherSessionData.username+' ?</p>')
-		document.write('<img src="apache.jpg" alt="APA_FORM" >')
+		document.write('<p style="font-size:25px;color:green;">how are you '+sessionObjectJson.someOtherSessionData.username+'</p>')
+		document.write('<p style="font-size:25px;color:green;">session started at :'+expiresAt+'</p>')
+		document.write('<img src="apache.jpg" alt="Boki-Bok" width="300" height="400">')
 	} else {
 		window.location.href = 'login.html';
 	}
